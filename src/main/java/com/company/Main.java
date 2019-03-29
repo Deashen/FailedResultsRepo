@@ -1,7 +1,10 @@
 package com.company;
 
 import java.io.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import com.opencsv.CSVReader;
@@ -15,9 +18,10 @@ public class Main {
 
         //BIG NOTE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         //Please ensure the folder storing the pictures are not included in this test.
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date();
         String folder = "SourceFiles\\Results";
-        String csvFileName = "SourceFiles\\Validate data"+ date.getTime()+".csv";
+        String csvFileName = "SourceFiles\\Validate data "+dateFormat.format(date)+" "+ date.getTime()+".csv";
         File file = new File(folder);
         File[] listOfFiles = file.listFiles();
         List<String[]> contents = new ArrayList<String[]>();
