@@ -20,7 +20,7 @@ public class Main {
         //Please ensure the folder storing the pictures are not included in this test.
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date();
-        String folder = "SourceFiles\\Results";
+        String folder = "SourceFiles\\NewLogFiles";
         String csvFileName = "SourceFiles\\Validate data "+dateFormat.format(date)+" "+ date.getTime()+".csv";
         File file = new File(folder);
         File[] listOfFiles = file.listFiles();
