@@ -4,13 +4,9 @@ import java.io.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
-import com.opencsv.bean.ColumnPositionMappingStrategy;
-import com.opencsv.bean.CsvToBean;
 
 public class Main {
 
@@ -20,8 +16,8 @@ public class Main {
         //Please ensure the folder storing the pictures are not included in this test.
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date();
-        String folder = "SourceFiles\\NewLogFiles";
-        String csvFileName = "SourceFiles\\Validate data "+dateFormat.format(date)+" "+ date.getTime()+".csv";
+        String folder = "C:\\Users\\dreddy\\FailResultsReader\\SourceFiles\\NewLogFiles";
+        String csvFileName = "C:\\Users\\dreddy\\FailResultsReader\\SourceFiles\\Validate data "+dateFormat.format(date)+" "+ date.getTime()+".csv";
         File file = new File(folder);
         File[] listOfFiles = file.listFiles();
         List<String[]> contents = new ArrayList<String[]>();
